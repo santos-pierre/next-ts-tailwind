@@ -56,8 +56,9 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-col flex-wrap items-center justify-center w-full mt-12 md:flex-row md:max-w-3xl">
-                    {links.map((link) => (
+                    {links.map((link, index) => (
                         <a
+                            key={`${index}-${link}`}
                             href={link.url}
                             className="transition-all ease-linear duration-[0.15s] m-4 p-4 md:p-8 text-left border border-gray-300 rounded-[10px] w-[45%] hover:text-blue-600 hover:border-blue-600 focus:text-blue-600 focus:border-blue-600  active:text-blue-600 active:border-blue-600"
                         >
